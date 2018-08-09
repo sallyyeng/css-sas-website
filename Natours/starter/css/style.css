@@ -6,3 +6,68 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ font-family: "Lato", sans-serif;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 1.7;
+ color: #777;
+ padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #b8d4e43b, 
+    #61b4ece1), 
+    url(../img/yosemite.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%)
+}
+
+.logo-box {
+  position: absolute; /* in relation to parent component */
+  top: 25px;
+  left: 20px;
+}
+
+.logo {
+  height: 30px; /* width is implied after specifying height */
+}
+
+.heading-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) /* In relation to itself now, NOT parent */
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase; 
+}
+
+.heading-primary-main {
+  display: block; /* block elements take up width given and create line breaks */
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 15px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 11px;
+}
