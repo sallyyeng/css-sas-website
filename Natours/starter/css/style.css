@@ -50,7 +50,8 @@ body {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%) /* In relation to itself now, NOT parent */
+  transform: translate(-50%, -50%); /* In relation to itself now, NOT parent */
+  text-align: center;
 }
 
 .heading-primary {
@@ -63,11 +64,66 @@ body {
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 15px;
+
+  animation: moveInLeft 1.7s ease-out
+  /* animation-timing-function: ease-out;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s; */
 }
 
 .heading-primary-sub {
   display: block;
   font-size: 25px;
   font-weight: 300;
-  letter-spacing: 11px;
+  letter-spacing: 10.7px;
+
+  animation: moveInUp 1.2s ease-out 0.5s;
+  animation-fill-mode: backwards;
 }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* .btn:link,
+.bin:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 35px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.1s; /* adds qualities to the transformations below i.e. all properties can be transitioned and it will take 2s to transition them */
+} */
+
+/* .btn-white {
+  background: #fff;
+  color: rgb(12, 102, 185);
+}
+
+.btn:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 10px 20px #00000065;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 10px #00000031;
+} */
